@@ -1,0 +1,37 @@
+
+<mat-card class="example-card">
+    <div style="padding: 20px; " >
+        <span style="color: #b84141; font-size: 24px; font: bolder;padding-bottom: 20px; ">Se connecter</span>
+    </div>
+    <div>
+      <img [src]="myimage" alt="Avatar" class="avatar1">
+    </div>
+    <mat-card-content>
+        <form >
+            <div class="example-container">
+                <mat-form-field class="full-width" appearance="fill">
+                  <mat-label>Email</mat-label>
+                  <input matInput placeholder="pat@example.com" [formControl]="email" required>
+                  <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="example-container">
+                <a  class="aLink " routerLink='/motdepasse'>Mot de passe oublié?</a>
+                <mat-form-field class="full-width" appearance="fill">
+                  <mat-label>Mot de passe</mat-label>
+                  <input matInput [type]="hide ? 'password' : 'text'" required>
+                  <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  </button>
+                </mat-form-field>
+                <a  class="aLink " routerLink='/nvcompte'>Créer un nouveau compte</a>
+            </div>
+        </form>
+    </mat-card-content>
+    <mat-card-actions>
+            <button mat-flat-button class="login" color="primary">
+              <mat-icon >mail_outline</mat-icon>
+                Se connecter
+            </button>
+    </mat-card-actions>
+  </mat-card>

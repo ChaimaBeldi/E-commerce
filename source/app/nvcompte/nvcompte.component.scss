@@ -1,0 +1,74 @@
+
+mat-card{
+    max-width: 500px;
+    margin: 0.8em auto ;
+    text-align: center;
+    // max-height: 1200px;
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.8s;
+
+}  
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+.header{
+    text-align: center;
+}
+.full-width{
+    width: 80%;
+}
+.forgot-password{
+     padding-left: 0px;
+}
+.email-input{
+    padding-top: 10px;
+}
+.aLink{
+float: right;
+padding-right: 60px;
+text-decoration: none;
+}
+
+.example-container .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+  
+  .example-right-align {
+    text-align: right;
+  }
+  
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+  
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+  .nvcompte{
+    color: #b84141; 
+    font-size: 20px;
+    font: bolder;
+    
+  }
+  .full-width{
+    width: 100%;
+    justify-content: center;
+    padding-top:8px;
+}
+.btn{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background-color: rgb(76, 175, 80);
+    padding: 10px 100px;
+    margin: 6px ;
+    width: 50%;
+    justify-content: center;
+}

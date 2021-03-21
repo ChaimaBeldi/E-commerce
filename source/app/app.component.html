@@ -1,0 +1,22 @@
+
+  <mat-toolbar class="navbar" color="primary" >
+    <button mat-icon-button (click)="toggleNavBar()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>E-commerce</span>
+    <span class="example-spacer"></span>
+    <button mat-button class="btn">
+      <a mat-button class="login" routerLink='/se_connecter'>
+        <mat-icon>account_circle</mat-icon>
+          Se connecter
+      </a>
+    </button>
+  </mat-toolbar>
+  <mat-sidenav-container >
+    <mat-sidenav mode="side" [(opened)]="opened">
+    </mat-sidenav>
+    <mat-sidenav-content> <router-outlet></router-outlet></mat-sidenav-content>
+  </mat-sidenav-container>
+  
+
+  

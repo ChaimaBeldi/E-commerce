@@ -1,0 +1,82 @@
+<mat-card class="example-card">
+    <div >
+        <span class="nvcompte ">Nouveaux clients</span>
+    </div>
+    <div>
+        <p style="padding: 10px;">Créez votre compte client en quelques clics !</p>
+    </div>
+    <mat-card-content>
+        <div class="example-container">
+            <mat-form-field class="full-width" appearance="fill">
+              <mat-label>Nom</mat-label>
+              <input  type="text" matInput required>
+            </mat-form-field>
+        </div>
+        <div class="example-container">
+            <mat-form-field class="full-width" appearance="fill">
+              <mat-label>Prénom</mat-label>
+              <input type="text" matInput required>
+            </mat-form-field>
+        </div>
+        <div class="example-container">
+          <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Adresse</mat-label>
+            <input type="text" matInput required>
+          </mat-form-field>
+        </div>
+        <div   style=" justify-content: center; display:flex" class="example-container">
+          <mat-form-field style="width:259.5px;" appearance="fill">
+            <mat-label>Ville</mat-label>
+            <input type="text" matInput required>
+          </mat-form-field>
+        
+          <mat-form-field style="width:239.5px;"  appearance="fill">
+            <mat-label>Code postal</mat-label>
+            <input type="texte" matInput required>
+          </mat-form-field>
+        </div>
+        <div class="example-container">
+            <mat-form-field class="full-width" appearance="fill">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="pat@example.com" [formControl]="email" required>
+              <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="example-container">
+            <form [formGroup]="myForm">
+                <mat-form-field class="full-width" appearance="fill">
+                  <input matInput placeholder="New password" [type]="hide ? 'password' : 'text'" formControlName="password" required>
+                  <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  </button>
+                  <mat-error *ngIf="myForm.hasError('required', 'password')">
+                    Please enter your new password
+                  </mat-error>
+                </mat-form-field>
+            </form> 
+        </div>  
+        <div class="example-container">
+            <form [formGroup]="myForm">
+                <mat-form-field class="full-width" appearance="fill">
+                  <input matInput placeholder="Confirm password" [type]="hide1 ? 'password' : 'text'" formControlName="confirmPassword" [errorStateMatcher]="matcher" required>
+                  <button mat-icon-button matSuffix (click)="hide1 = !hide1" [attr.aria-label]="'hide1 password'" [attr.aria-pressed]="hide1">
+                    <mat-icon>{{hide1 ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  </button>
+                  <mat-error *ngIf="myForm.hasError('notSame')">
+                        Passwords do not match
+                    </mat-error>
+                </mat-form-field>
+            </form>
+        </div>
+    </mat-card-content>
+    <div>
+        <mat-card-actions style="display: flex;justify-content: space-evenly;">
+           <button class="btn" mat-flat-button color="primary" >Créer un compte</button>
+           <button class="btn" mat-flat-button color="primary" routerLink='/se_connecter' >Retour</button>
+            
+       </mat-card-actions>
+    </div>
+  
+  </mat-card>
+  
+
